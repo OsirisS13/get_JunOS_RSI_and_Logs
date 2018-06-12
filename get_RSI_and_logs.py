@@ -10,7 +10,7 @@ from jnpr.junos import Device
 import jnpr.junos
 #for user prompt to enter passwords 
 from getpass import getpass
-#used to parse the xml???
+#used to parse the xml
 from lxml import etree
 import sys
 from jnpr.junos.factory.factory_loader import FactoryLoader
@@ -60,7 +60,7 @@ def sftp_copy(router_address,user,passwd, ticket_ID):
 		print "Transferred: {0}\tOut of: {1}".format(transferred, toBeTransferred)
 	#set ssh client
 	ssh_client = paramiko.SSHClient()
-	#allow auto accept of remote ssh keys (other wise connection will fail for new hosts)
+	#allow auto accept of remote ssh keys (otherwise connection will fail for new hosts)
 	ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 	#initiate the connection
 	ssh_client.connect(hostname=router_address,username=user,password=passwd)
