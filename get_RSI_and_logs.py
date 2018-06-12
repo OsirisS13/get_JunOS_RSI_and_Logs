@@ -1,4 +1,4 @@
-#change this to the location you want to save the retrieved files
+#change this to the location you want to save the retrieved files on the device running the script
 save_dir = ""
 
 import requests
